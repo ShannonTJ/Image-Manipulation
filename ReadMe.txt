@@ -1,0 +1,64 @@
+CPSC 453 ASSIGNMENT 2
+SHANNON TJ 10101385
+
+
+HOW TO COMPILE:  make all
+HOW TO RUN:      ./boilerplate
+
+
+
+OS + VERSION
+------------------
+Linux zone42-wc 4.6.5-300.fc24.x86_64 #1 SMP Thu Jul 28 01:10:12 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
+
+LSB Version:	:core-4.1-amd64:core-4.1-noarch:cxx-4.1-amd64:cxx-4.1-noarch:desktop-4.1-amd64:desktop-4.1-noarch:languages-4.1-amd64:languages-4.1-noarch:printing-4.1-amd64:printing-4.1-noarch
+Distributor ID:	Fedora
+Description:	Fedora release 24 (Twenty Four)
+Release:	24
+Codename:	TwentyFour
+
+
+
+MOUSE CONTROLS
+-------------------
+MOUSE CLICK + DRAG = MOVE IMAGE AROUND SCREEN
+MOUSE SCROLL UP = ZOOM INTO MIDDLE OF SCREEN
+MOUSE SCROLL DOWN = ZOOM OUT OF MIDDLE OF SCREEN
+
+
+
+KEYBOARD CONTROLS
+-------------------
+1 = SWITCH TO IMAGE 1
+2 = SWITCH TO IMAGE 2
+3 = SWITCH TO IMAGE 3
+4 = SWITCH TO IMAGE 4
+5 = SWITCH TO IMAGE 5
+6 = SWITCH TO IMAGE 6
+
+R = ROTATE IMAGE COUNTER-CLOCKWISE BY 30 DEGREES
+
+Q = RELOAD ORIGINAL IMAGE COLORS (NO FILTERS)
+W = GRAYSCALE 1 FILTER
+E = GRAYSCALE 2 FILTER
+A = GRAYSCALE 3 FILTER
+S = SEPIA FILTER
+
+Z = GAUSSIAN 3X3
+X = GAUSSIAN 5X5
+C = GAUSSIAN 7X7
+
+V = VERTICAL SOBEL
+B = HORIZONTAL SOBEL
+N = UNSHARP MASK
+
+
+
+REFERENCES
+------------------
+SEPIA FORMULA REFERENCED FROM http://stackoverflow.com/questions/1061093/how-is-a-sepia-tone-created
+GAUSSIAN BLUR CODE REFERENCED FROM CAMILO TALERO 10159902
+
+
+
+

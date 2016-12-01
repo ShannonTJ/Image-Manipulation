@@ -1,0 +1,52 @@
+// ==========================================================================
+// Vertex program for barebones GLFW boilerplate
+//
+// Author:  Sonny Chan, University of Calgary
+// Date:    December 2015
+// ==========================================================================
+#version 410
+
+
+// interpolated colour received from vertex stage
+in vec3 Colour;
+in vec2 textureCoords;
+
+// first output is mapped to the framebuffer's colour index by default
+out vec4 FragmentColour;
+
+uniform sampler2DRect tex;
+
+void main(void)
+{  
+    
+    vec2 newCoords;
+    newCoords.x = textureCoords.x;
+    newCoords.y = textureCoords.y;
+    
+    //Initialize colour vector, intermediate vector
+    vec4 colour;
+    vec4 med;
+
+	   //med = get neighbouring pixel values (x = i-2, y = j-2)
+
+   	   med = texture(tex, newCoords + vec2(-1,-1));
+	   colour = colour + med;
+
+   	   med = texture(tex, newCoords + vec2(1,1));
+	   colour = colour - med;
+
+   	   med = texture(tex, newCoords + vec2(-1,0));
+	   colour = colour + 2*med;
+
+   	   med = texture(tex, newCoords + vec2(1,0));
+	   colour = colour - 2*med;
+
+  	   med = texture(tex, newCoords + vec2(-1,1));
+	   colour = colour + med;
+
+  	   med = texture(tex, newCoords + vec2(1,-1));
+	   colour = colour - med;
+
+
+    FragmentColour = colour;
+}
